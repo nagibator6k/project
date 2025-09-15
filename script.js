@@ -10,6 +10,7 @@ document.getElementById('getActivity').addEventListener('click', async () => {
         }
 
         const activityData = await response.json();
+        
         document.getElementById('activityOutput').innerHTML = `
             <p><strong>Занятие:</strong> ${activityData.activity}</p>
             <p><strong>Тип:</strong> ${activityData.type}</p>
@@ -20,3 +21,4 @@ document.getElementById('getActivity').addEventListener('click', async () => {
         document.getElementById('activityOutput').innerHTML = `<p style="color: red;">${error.message}</p>`;
     }
 });
+
