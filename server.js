@@ -5,7 +5,6 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-// Прокси для Bored API
 app.get('/proxy/bored/:endpoint', async (req, res) => {
     try {
         const response = await axios.get(`https://bored-api.appbrewery.com/${req.params.endpoint}`);

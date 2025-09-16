@@ -2,8 +2,7 @@ document.getElementById('getActivity').addEventListener('click', async () => {
     try {
         document.getElementById('activityOutput').innerHTML = '<p>Загрузка...</p>';
 
-        // Обращаемся к нашему собственному прокси-серверу
-        const response = await fetch('http://localhost:3000/proxy/bored/random'); // Замени на реальный адрес прокси
+        const response = await fetch('http://localhost:3000/proxy/bored/random');
 
         if (!response.ok) {
             throw new Error(`Ошибка HTTP ${response.status}: ${await response.text()}`);
